@@ -1,0 +1,73 @@
+body {  
+    font-family: 'Cormorant', serif;
+    font-size: 20px;
+    font-weight: 300;
+    @include mobile-bp{
+        font-size: 16px;
+    }
+}
+h1, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.heading {
+    font-size: 5.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: italic; 
+    @include mobile-bp {
+        font-size: 4.5rem;
+    }
+    &--bloc{
+        font-size: 4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        font-style: italic; 
+        
+    }
+}  
+.subheading{
+    font-size : 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include mobile-bp {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+p {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    &:hover,
+    &:focus{
+     color : rgb(174, 159, 159);
+    } 
+}
+nav{
+    font-style: italic;
+}
+
+.txt{
+    color: #333030;
+    text-indent: 5%;
+    &--large{
+        font-size: 26px;
+    }
+    &--italic{
+        font-style: italic;
+    }
+
+}
+
+.emphase {
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+}

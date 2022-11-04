@@ -1,0 +1,321 @@
+/*Media queries*/
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+section {
+  padding: 2.5rem 1.5rem;
+  height: auto;
+}
+
+.wrapper--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.wrapper--grid--3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.wrapper--center {
+  margin: auto;
+  width: 70%;
+}
+
+.grid-column-left {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.grid-column-2 {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.grid-column-3 {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 5;
+  grid-row: 1/6;
+}
+
+.grid-column--left-2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.bloc-txt {
+  margin-bottom: 2rem;
+}
+
+.bloc-txt--center {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+body {
+  font-family: 'Cormorant', serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+h1, p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.heading {
+  font-size: 5.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 4.5rem;
+  }
+}
+
+.heading--offerings {
+  font-size: 4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.subheading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .subheading {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:focus {
+  color: #ae9f9f;
+}
+
+nav {
+  font-style: italic;
+}
+
+.txt {
+  color: #333030;
+  text-indent: 5%;
+}
+
+.txt--large {
+  font-size: 26px;
+}
+
+.txt--italic {
+  font-style: italic;
+}
+
+header {
+  margin: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #ae9f9f;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin: 1rem;
+  }
+}
+
+.logo-container {
+  height: 120px;
+  padding: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-container {
+    height: 80px;
+  }
+}
+
+.logo {
+  font-family: "Whisper", cursive;
+}
+
+.logo--1 {
+  font-size: 56px;
+  position: relative;
+  top: -20px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo--1 {
+    font-size: 40px;
+  }
+}
+
+.logo--2 {
+  font-size: 20px;
+  font-weight: 200px;
+  position: relative;
+  left: 64px;
+  top: -46px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo--2 {
+    font-size: 14px;
+    top: -40px;
+    left: 50px;
+  }
+}
+
+.logo--3 {
+  font-size: 50px;
+  position: relative;
+  top: -70px;
+  left: -2px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo--3 {
+    font-size: 36px;
+    top: -55px;
+  }
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__link {
+  margin-left: 1.5rem;
+}
+
+.homepage__txt {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: auto;
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.homepage__txt .subheading {
+  margin-bottom: 2rem;
+}
+
+.homepage__txt p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.homepage__img-container {
+  width: 80%;
+  margin: auto;
+}
+
+img {
+  border: 6px solid white;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#img--1 {
+  width: 80%;
+  position: relative;
+  left: 5%;
+}
+
+#img--2 {
+  position: relative;
+  top: -30px;
+  left: 50%;
+  z-index: 1;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#img--3 {
+  position: relative;
+  top: -150px;
+  left: 18%;
+  z-index: 0;
+  width: 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.link--contact {
+  color: #333030;
+  font-style: italic;
+  font-weight: bold;
+  border-bottom: 1px solid #ae9f9f;
+}
+
+.link--mail {
+  font-style: italic;
+}
+/*# sourceMappingURL=main.css.map */

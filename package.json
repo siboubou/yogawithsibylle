@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "sass": "^1.55.0"
+  },
+  "name": "website_yoga",
+  "version": "1.0.0",
+  "description": "Website Yoga Classes",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "author": "Siboubou",
+  "license": "ISC"
+}
