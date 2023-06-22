@@ -1,11 +1,18 @@
-.link{
-    &--contact{
-        color: #333030;
-        font-style: italic;
-        font-weight: bold;
-        border-bottom: 1px solid  rgb(174, 159, 159);
-    }
-    &--mail{
-        font-style: italic;
-    }
+.link {
+  border-bottom: 1px solid rgb(174, 159, 159);
+  font-weight: bold;
+  &--contact {
+    color: #333030;
+    font-style: italic;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(174, 159, 159);
   }
+  &--mail {
+    font-style: italic;
+  }
+}
+.lang__link {
+  width: 26px;
+  height: 22px;
+  object-fit: contain;
+}

@@ -1,110 +1,133 @@
 header {
-    margin : 1.5rem;
-    position: relative;
-    @include mobile-bp{
-        margin : 1rem;
-    }
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px  solid rgb(174, 159, 159);
+  margin: 1.5rem;
+  position: relative;
+  @include mobile-bp {
+    margin: 1rem;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(217, 195, 166);
 }
 
-
-.logo-container{
-    height: 120px;
-    padding: 0.5rem;
-    object-fit: cover;
-    @include tablette-bp{
-        height: 80px;
-    }
-    @include mobile-bp{
-        height: 60px;
-    }
+// rgb(222, 183, 147);
+.logo-container {
+  height: 120px;
+  padding: 0.5rem;
+  object-fit: cover;
+  @include tablette-bp {
+    height: 80px;
+  }
+  @include mobile-bp {
+    height: 60px;
+  }
 }
 
 .nav {
- display: flex;
- &__link{
+  display: flex;
+  &__link {
     margin-left: 1.5rem;
-  @include mobile-bp{
-    display: none;
+    @include mobile-bp {
+      display: none;
+    }
   }
 }
-}
-.nav__link--bull {
-    position : relative;
+.infobulle {
+  position: relative;
 
-    &:hover:after,
-    &:focus:after {
-        content:attr(aria-label);
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom : -2.5em;
-        width: fit-content;
-        white-space: nowrap;
-        // padding: 1em;
-        font-weight: bold;
-        color: #333030;
-        font-size: 16px;
-
-}
-}
-
-.dropdown{
-    display: none;
-    
-    @include mobile-bp{
-        display: block;
-        margin-right: 2.5em;
-        // float: left;
-        // overflow: hidden;
-    }
-    &__btn{
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    &__menu{
-        display: none;
-        position: absolute;
-        top: 100%;
-        right : -1.5em;
-        list-style-type: none;
-        background-color: antiquewhite;
-        padding: 0;
-        margin:2px 1.5em 0 0 ;
-    }
-    &__input{
-        display: none;
-        // z-index: 1;
-        // float: none;
-        // right : 1em;
-        // top : 4.5em;
-        
-        
-
-        &:hover + .dropdown__menu,
-        &:checked + .dropdown__menu
-        {
-            display: block;
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    &__menu li{
-        
-        padding: 10px 20px;
-        text-align: left;
-        font-style: italic;
-        border-bottom: #333030 solid 0.5px;
-    }
-
-  
+  &:hover:after,
+  &:focus:after {
+    content: attr(aria-label);
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2em;
+    width: fit-content;
+    white-space: nowrap;
+    padding: 0.2em;
+    background: #333030;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+  }
 }
 
+.dropdown--btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+
+  @include mobile-bp {
+    display: inline-block;
+    margin-right: 1em;
+    float: right;
+  }
+}
+
+.dropdown--menu {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 2;
+  transform: translateY(5rem) 2s ease-in;
+}
+
+.dropdown__nav {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  & ul {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+  }
+
+  & li {
+    padding: 10px 20px;
+
+    text-align: center;
+    font-size: 48px;
+    font-style: italic;
+    border-bottom: #333030 solid 0.5px;
+  }
+}
+.dropdown--menu.open {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  // opacity: 0;
+  visibility: hidden;
+}
+
+// .toggle_btn:hover + .menu,
+// .toggle_btn:checked + .menu__content {
+//   display: block;
+//   display: flex;
+//   flex-direction: column;
+// }
 
 //création du logo en html
 // .logo {
@@ -130,7 +153,6 @@ header {
 //             left: 50px;
 
 //          }
-
 
 //     }
 //     &--3{
